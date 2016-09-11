@@ -49,6 +49,7 @@ gyroscope (gyro)  : The angular velocity vector measured by the gyroscope for ea
 
 The following table shows the measurement as indicated in this dataset, paired with the more abbreviated name of the measurement in the source dataset:
 
+```
 Measurement                                                    Source Dataset Measurement
 ================================================================================================
 time_body_acceleration_mean_x                                  tBodyAcc-mean()-X
@@ -130,3 +131,4 @@ frequency_body_body_gyro_magnitude_mean_freq                   fBodyBodyGyroMag-
 frequency_body_body_gyro_jerk_magnitude_mean                   fBodyBodyGyroJerkMag-mean()
 frequency_body_body_gyro_jerk_magnitude_std                    fBodyBodyGyroJerkMag-std()
 frequency_body_body_gyro_jerk_magnitude_mean_freq              fBodyBodyGyroJerkMag-meanFreq()
+```
