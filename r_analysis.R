@@ -70,9 +70,7 @@ getMeanAndStandardDeviationColumnNames <- function(allColumnNames) {
 #
 # sourceDir : The subdirectory containing the source data,
 # e.g. "data/UCI HAR Dataset"
-analyzeData <- function(sourceDir) {
-    currDir = getwd()
-    setwd(sourceDir)
+analyzeData <- function() {
     activityColumns <- c("activity_id", "activity")
     featureColumns <- c("feature_id", "feature")
     subjectColumns <- c("subject_id")
@@ -120,8 +118,5 @@ analyzeData <- function(sourceDir) {
     # Calculate mean values per source/subject/activity/measurement
     meanStdDataMeans <- ddply(meltedMeanStdData, names(meltedMeanStdData)[1:4], summarize, mean = mean(value))
 
-    setwd(currDir)
-    write.csv(meanStdDataMeans, "mean_measurements.csv")
-    meanStdDataMeans
+    write.table(meanStdDataMeans, "mean_measurements.txt", row.name=FALSE)
 }
-
