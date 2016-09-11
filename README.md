@@ -34,9 +34,9 @@ Usage
 To run the analysis:
 
   - source("r_analysis.R")
-  - resultData <- analyzeData("data/UCI HAR Dataset")
+  - analyzeData()
 
-  Additionally, the analyzeData function will write the output dataset to a file called "mean_measurements.csv" in the current working directory.
+  The analyzeData function will write the output dataset to a file called "mean_measurements.txt" in the current working directory.
 
 =====
 Notes
